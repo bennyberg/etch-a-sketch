@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
     <script src="javascript.js" defer></script>
 </head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        /* button on top of grid */
+        justify-content: center;
+        /* vertical center */
+        align-items: center;
+        /* horizontal center */
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    #input {
+        margin-bottom: 40px;
+        /* space between button and grid */
+    }
+</style>
+
 <body>
+    <div id="top">
+        <button id="input">Generate</button>
+    </div>
     <div id="grid"></div>
-    
+
 </body>
+
 </html>
