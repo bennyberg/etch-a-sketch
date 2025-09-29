@@ -1,6 +1,7 @@
 
 const grid = document.getElementById("grid");
 let coloringActive = false;
+let entryColor = 'lightgray';
 
 // Style the container like a grid using flex-wrap
 grid.style.display = "flex";
@@ -28,6 +29,7 @@ const generateGrid = function (size) {
 
 
             cell.addEventListener("mouseenter", () => {
+                entryColor = cell.style.backgroundColor;
                 //first hover
                 if (cell.style.backgroundColor === "lightgray") {
                     cell.style.backgroundColor = randomColor();
@@ -42,7 +44,7 @@ const generateGrid = function (size) {
 
             cell.addEventListener("mouseleave", () => {
                 if (coloringActive) return;
-                cell.style.backgroundColor = "lightgray";
+                cell.style.backgroundColor = entryColor;
             });
 
             grid.appendChild(cell);
